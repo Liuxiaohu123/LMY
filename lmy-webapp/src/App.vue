@@ -1,0 +1,49 @@
+<template>
+  <div id="app">
+    <LmyLonding v-if="flage">
+      <button slot="btn" class="londingBtn" @click="clear">跳过(5)</button>
+    </LmyLonding>
+    <div v-else>
+      <LmyHeader></LmyHeader>
+      <LmyFooter></LmyFooter>
+    </div>
+  </div>
+</template>
+
+<script>
+import LmyLonding from "./components/LmyLonding.vue";
+import LmyHeader from "./components/Header.vue";
+import LmyFooter from "./components/Footer.vue";
+
+
+
+export default {
+  data() {
+    return {
+      flage:false
+    }
+  },
+  name: "app",
+  components: {
+    LmyLonding,
+    LmyHeader,
+    LmyFooter
+  },
+  methods: {
+    clear(){
+      this.flage = false;
+    }
+  },
+}
+</script>
+<style>
+#app {
+  width: 100%;
+  height: 100%;
+}
+.londingBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+</style>
