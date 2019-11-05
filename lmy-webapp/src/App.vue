@@ -5,6 +5,9 @@
     </LmyLonding>
     <div v-else>
       <LmyHeader></LmyHeader>
+      <div class="main">
+        <router-view></router-view>
+      </div>
       <LmyFooter></LmyFooter>
     </div>
   </div>
@@ -15,29 +18,28 @@ import LmyLonding from "./components/LmyLonding.vue";
 import LmyHeader from "./components/Header.vue";
 import LmyFooter from "./components/Footer.vue";
 
-
-
 export default {
   data() {
     return {
-      flage:false
-    }
+      flage: false,
+    };
   },
   name: "app",
   components: {
     LmyLonding,
     LmyHeader,
-    LmyFooter
+    LmyFooter,
   },
   methods: {
-    clear(){
+    clear() {
       this.flage = false;
     }
   },
-}
+};
 </script>
 <style>
 #app {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
 }
@@ -45,5 +47,8 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+.main {
+  padding: 50px 0 70px;
 }
 </style>
