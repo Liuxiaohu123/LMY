@@ -1,24 +1,24 @@
 <template>
   <div class="My">
     <div class="MyInfor">
-      <img class="MyInforImg" :src="userData.src" />
-      <p class="MyInforText">{{userData.name}}</p>
+      <img class="MyInforImg" :src="data.src" />
+      <p class="MyInforText">{{data.studentName}}</p>
     </div>
     <div class="MyHave">
       <div>
-        <p>{{userData.experience}}</p>
+        <p>{{data.experience}}</p>
         <p>经验值</p>
       </div>
       <div>
-        <p>{{userData.charm}}</p>
+        <p>{{data.charm}}</p>
         <p>魅力值</p>
       </div>
       <div>
-        <p>{{userData.money}}</p>
+        <p>{{data.money}}</p>
         <p>蓝豆</p>
       </div>
       <div>
-        <p>{{userData.mind}}</p>
+        <p>{{data.mind}}</p>
         <p>心意</p>
       </div>
     </div>
@@ -48,20 +48,15 @@
 </template>
 
 <script>
+
 export default {
   name: "LmyMy",
+  props:["data"],
   data() {
     return {
-      userData: {
-        name: "刘小虎",
-        experience: 0,
-        charm: 0,
-        money: 0,
-        mind: 0,
-        src: require("../assets/my01.gif")
-      }
+      userData: ""
     };
-  }
+  },
 };
 </script>
 

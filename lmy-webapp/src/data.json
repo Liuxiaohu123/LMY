@@ -1,0 +1,50 @@
+{
+  "studentName": "刘小虎",
+  "experience": 56,
+  "charm": 10,
+  "money": 50,
+  "mind": 4,
+  "src": "./image/my01.gif",
+  "courses":[
+    {
+      "class":"软件工程",
+      "className":"javascript开发",
+      "classType":"学校课表班课",
+      "teacheName":"毕鹏",
+      "classStudents":[
+        {
+          "studentName":"刘小虎",
+          "studentId":"16034022",
+          "studentExperience":0,
+          "material":"10%"
+        },
+        {
+          "studentName":"梁明",
+          "studentId":"16034007",
+          "studentExperience":10,
+          "material":"50%"
+        }
+      ]
+    },
+    {
+      "class":"计算机",
+      "className":"数据及结构",
+      "classType":"学校课表班课",
+      "teacheName":"张媛",
+      "classStudents":[
+        {
+          "studentName":"刘小虎",
+          "studentId":"16034022",
+          "studentExperience":50,
+          "material":"40%"
+        },
+        {
+          "studentName":"梁明",
+          "studentId":"16034007",
+          "studentExperience":20,
+          "material":"30%"
+        }
+      ]
+    }
+  ]
+}

@@ -1,38 +1,25 @@
 <template>
   <div id="app">
-    <LmyLonding v-if="flage">
-      <button slot="btn" class="londingBtn" @click="clear">跳过(5)</button>
-    </LmyLonding>
-    <div v-else>
-      <LmyHeader></LmyHeader>
-      <div class="main">
-        <router-view></router-view>
-      </div>
-      <LmyFooter></LmyFooter>
-    </div>
+    <router-view :data="data"></router-view>
   </div>
 </template>
 
 <script>
-import LmyLonding from "./components/LmyLonding.vue";
-import LmyHeader from "./components/Header.vue";
-import LmyFooter from "./components/Footer.vue";
+import lmyApi from "./apis/lmyApi";
 
 export default {
+  name: "app",
   data() {
     return {
-      flage: false,
-    };
+      data:""
+    }
   },
-  name: "app",
-  components: {
-    LmyLonding,
-    LmyHeader,
-    LmyFooter,
+  created() {
+    this._getData()
   },
   methods: {
-    clear() {
-      this.flage = false;
+    _getData(){
+      this.data=lmyApi.getLmyData()
     }
   },
 };
@@ -42,13 +29,5 @@ export default {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-}
-.londingBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.main {
-  padding: 50px 0 70px;
 }
 </style>

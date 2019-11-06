@@ -1,15 +1,17 @@
 <template>
-  <a class="curriculums" href="#/activity" @click="Join">
-    <div class="cImg" :style=
-    "{'background-color':'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')'}">
-      <img src="../assets/yun.gif"/>
+  <a class="curriculums" :href=" '#/lmyClass?num='+courseId" @click="Join">
+    <div
+      class="cImg"
+      :style="{'background-color':'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')'}"
+    >
+      <img src="../assets/yun.gif" />
     </div>
     <div class="cText">
       <h3>{{course.class}}</h3>
-      <h3>{{course.name}}</h3>
+      <h3>{{course.className}}</h3>
       <p>
-        <span>{{course.teacher}}</span>
-        <span>{{course.type}}</span>
+        <span>{{course.teacheName}}</span>
+        <span>{{course.classType}}</span>
       </p>
     </div>
   </a>
@@ -22,19 +24,10 @@ export default {
   props: ["course", "courseId"],
   name: "Curriculums",
   methods: {
-    Join(){
-      this.$emit("ChangeShow",true);
+    Join() {
+      this.$emit("ChangeName", this.course.className);
     }
-  },
-  // computed: {    //计算属性得到的结果是固定的
-  //   RandomColor() {
-  //     let r, g, b;
-  //     r = Math.floor(Math.random() * 256);
-  //     g = Math.floor(Math.random() * 256);
-  //     b = Math.floor(Math.random() * 256);
-  //     return "rgb(" + r + "," + g + "," + b + ")";
-  //   }
-  // }
+  }
 };
 </script>
 <style scoped>

@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name:"LmyLonding"
+  name:"Londing"
 }
 </script>
 <style scoped>

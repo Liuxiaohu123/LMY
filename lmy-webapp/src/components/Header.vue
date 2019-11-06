@@ -2,35 +2,29 @@
   <div class="Header">
     <span class="back" v-show="flage" @click="back">&lt;</span>
     <img class="headerImg1" src="../assets/header01.gif" />
-    <span class="headerText1">{{flage?"111":value[num]}}</span>
+    <span class="headerText1">{{!flage?name:className}}</span>
     <span class="headerText2">帮助</span>
   </div>
 </template>
 <script>
 import Bus from "../router/bus.js";
 export default {
+  props: ["flage","className"],
   data() {
     return {
-      value: ["班课", "发现", "我的"],
-      num: 0,
-      flage: false
+      name: "班课"
     };
   },
   name: "Header",
   mounted: function() {
     var vm = this;
-    Bus.$on("val", data => {
-      vm.num = data;
-    });
-    Bus.$on("val1", data => {
-      vm.flage = data;
-    });
+      Bus.$on("val", data => {
+        vm.name = data;
+      });
   },
   methods: {
     back() {
-      this.flage = false;
-      this.$router.push("/class");
-      Bus.$emit("val1", false);
+      this.$router.push("/lmyHome");
     }
   }
 };

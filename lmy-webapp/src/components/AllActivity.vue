@@ -1,15 +1,14 @@
 <template>
   <div>
-    信息
+    全部活动
   </div>
 </template>
 
 <script>
 export default {
-  props:["course"]
+  name:"Activity"
 }
 </script>
-
-<style scoped>
+<style  scoped>
 
 </style>
