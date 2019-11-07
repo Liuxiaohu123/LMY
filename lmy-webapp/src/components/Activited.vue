@@ -1,12 +1,18 @@
 <template>
   <div>
-    结束活动
+    <activityBox :data="i" v-for="(i, index) in data" :key="index"></activityBox>
   </div>
 </template>
 
 <script>
+import activityBox from './ActivityBox'
+
 export default {
-  name:"Activity"
+  props:["data"],
+  name:"Activity",
+  components:{
+    activityBox
+  }
 }
 </script>
 <style  scoped>

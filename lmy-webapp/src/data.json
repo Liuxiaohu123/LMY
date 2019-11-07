@@ -24,6 +24,18 @@
           "studentExperience":10,
           "material":"50%"
         }
+      ],
+      "activity":[
+        {"activityName":"快速排序","experience":10,"peoples":50,"state":true},
+        {"activityName":"查并集","experience":3,"peoples":45,"state":true},
+        {"activityName":"图的遍历","experience":3,"peoples":50,"state":false},
+        {"activityName":"堆排序","experience":3,"peoples":50,"state":false},
+        {"activityName":"二叉树","experience":3,"peoples":5,"state":false},
+        {"activityName":"广度优先","experience":3,"peoples":5,"state":false},
+        {"activityName":"深度余香","experience":3,"peoples":50,"state":true},
+        {"activityName":"栈","experience":3,"peoples":50,"state":true},
+        {"activityName":"堆","experience":3,"peoples":50,"state":true},
+        {"activityName":"数据","experience":3,"peoples":50,"state":false}
       ]
     },
     {
@@ -44,6 +56,18 @@
           "studentExperience":20,
           "material":"30%"
         }
+      ],
+      "activity":[
+        {"activityName":"快速排序","experience":3,"peoples":50,"state":false},
+        {"activityName":"查并集","experience":3,"peoples":45,"state":false},
+        {"activityName":"图的遍历","experience":3,"peoples":50,"state":false},
+        {"activityName":"堆排序","experience":3,"peoples":50,"state":false},
+        {"activityName":"二叉树","experience":3,"peoples":5,"state":true},
+        {"activityName":"广度优先","experience":3,"peoples":5,"state":false},
+        {"activityName":"深度余香","experience":3,"peoples":50,"state":true},
+        {"activityName":"栈","experience":3,"peoples":50,"state":true},
+        {"activityName":"堆","experience":3,"peoples":50,"state":true},
+        {"activityName":"数据","experience":3,"peoples":50,"state":false}
       ]
     }
   ]

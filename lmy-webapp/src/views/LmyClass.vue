@@ -2,7 +2,7 @@
   <div>
     <Header :flage="flage" :className="data.courses[num].className"></Header>
     <div class="main">
-      <router-view :data="data"></router-view>
+      <router-view :data="data.courses[num]"></router-view>
     </div>
     <Footer :data="value"></Footer>
   </div>

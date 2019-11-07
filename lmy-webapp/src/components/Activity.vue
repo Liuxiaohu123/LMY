@@ -1,20 +1,33 @@
 <template>
-  <div>
+  <div class="activityMain">
     <div class="activity">
-      <a href :class=" (index==1)?'activityDiv1':'activityDiv' " @click="changea(1)">
+      <a
+        href="#/lmyClass/activity/allActivity"
+        :class=" (index==1)?'activityDiv1':'activityDiv' "
+        @click="changea(1)"
+      >
         <p>全部</p>
-        <p>{{num}}</p>
+        <p>{{allActivity | Statistics1(allActivity,"data.activity")}}</p>
       </a>
-      <a :class="  (index==2)?'activityDiv1':'activityDiv' " @click="changea(2)">
+      <a
+        href="#/lmyClass/activity/activitying"
+        :class="  (index==2)?'activityDiv1':'activityDiv' "
+        @click="changea(2)"
+      >
         <p>进行</p>
-        <p>{{num}}</p>
+        <p>{{activitying | Statistics2(activitying,data.activity)}}</p>
       </a>
-      <a :class="  (index==3)?'activityDiv1':'activityDiv' " @click="changea(3)">
+      <a
+        href="#/lmyClass/activity/activited"
+        :class="  (index==3)?'activityDiv1':'activityDiv' "
+        @click="changea(3)"
+      >
         <p>已结束</p>
-        <p>{{num}}</p>
+        <p>{{activited | Statistics3(activited,data.activity)}}</p>
       </a>
     </div>
-    <router-view></router-view>
+    {{data.activity}}
+    <router-view :data="data.activity"></router-view>
   </div>
 </template>
 
@@ -24,7 +37,9 @@ export default {
   props: ["data"],
   data() {
     return {
-      num: 1,
+      allActivity: 0,
+      activitying: 0,
+      activited: 0,
       index: 1
     };
   },
@@ -32,14 +47,43 @@ export default {
     changea(num) {
       this.index = num;
     }
+  },
+  filters: {
+    Statistics1(num,data) {
+      // for(let i=0;i<arr.length;i++){
+      //   num++
+      // } 
+      num = data;
+      num = num+1;
+      return num;
+    },
+    Statistics2(num,data) {
+      for(let i=0;i<Object.keys(data);i++){
+        num++
+      } 
+      return num
+    },
+    Statistics3(num,data) {
+      for(let i=0;i<Object.keys(data);i++){
+        num++
+      } 
+      return num
+    }
   }
 };
 </script>
 <style  scoped>
+.activityMain {
+  padding-top: 50px;
+}
 .activity {
   display: flex;
-  padding: 5px 0 0;
   font-size: 14px;
+  position: fixed;
+  padding: 5px 0 0;
+  top: 50px;
+  width: 100%;
+  background-color: white;
 }
 .activity > a {
   flex: 1;
@@ -54,5 +98,4 @@ export default {
   border-bottom: 2px solid rgb(0, 187, 222);
   color: rgb(0, 187, 222);
 }
-
 </style>
