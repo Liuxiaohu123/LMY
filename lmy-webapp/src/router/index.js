@@ -1,6 +1,8 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 
+import LmyLonding from '../views/LmyLonding.vue'
+
 import LmyHome from '../views/LmyHome.vue'
 import LmyHomeFind from "../components/Find.vue"
 import LmyHomeMy from "../components/My.vue"
@@ -21,39 +23,49 @@ Vue.use(VueRouter)
 
 let router = new VueRouter({
   routes: [
-    { path: "/", redirect: "/lmyHome" },
+    { path: "", redirect: "/londing" },
+    { path: "/londing", component: LmyLonding },
     {
       path: "/lmyHome",
       component: LmyHome,
       children: [
-        { path: "/lmyHome/", redirect: "/LmyHome/class" },
-        { path: "/lmyHome/class", component: LmyHomeClass },
-        { path: "/lmyHome/my", component: LmyHomeMy },
-        { path: "/lmyHome/find", component: LmyHomeFind }
+        { path: "", redirect: "class" },
+        { path: "class", component: LmyHomeClass },
+        { path: "my", component: LmyHomeMy },
+        { path: "find", component: LmyHomeFind }
       ]
     },
     {
       path: "/lmyClass",
       component: LmyClass,
       children: [
-        {path: "/lmyClass/",redirect:"/lmyClass/activity"},
+        {path: "",redirect:"activity"},
+        { path: "details", component: LmyClassDetails },
+        { path: "news", component: LmyClassNews },
+        { path: "resources", component: LmyClassResources },
+        { path: "member", component: LmyClassMember },
         {
-          path: "/lmyClass/activity",
+          path: "activity",
           component: LmyClassActivity,
           children: [
-            {path: "/lmyClass/activity/",redirect:"/lmyClass/activity/allActivity"},
-            { path: "/lmyClass/activity/allActivity", component: AllActivity },
-            { path: "/lmyClass/activity/activitying", component: Activitying },
-            { path: "/lmyClass/activity/activited", component: Activited, }
+            {path: "",redirect:"allActivity"},
+            { path: "allActivity", component: AllActivity },
+            { path: "activitying", component: Activitying },
+            { path: "activited", component: Activited, }
           ]
-        },
-        { path: "/lmyClass/details", component: LmyClassDetails },
-        { path: "/lmyClass/news", component: LmyClassNews },
-        { path: "/lmyClass/resources", component: LmyClassResources },
-        { path: "/lmyClass/member", component: LmyClassMember }
+        }
       ]
     },
   ]
+})
+
+router.beforeEach((to, from, next)=>{
+  // window.console.log(to.path,from.path);
+  if(to.path=='/lmyClass/activity/allActivity' &&from.path=='/lmyHome/class'){
+    let num = to.query.id
+    sessionStorage.setItem("num",num);
+  }
+  next();
 })
 
 export default router

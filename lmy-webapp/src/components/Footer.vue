@@ -1,10 +1,14 @@
 <template>
   <div class="footer">
     <div v-for="(i, index) in data" :key="index">
-      <a :href="i.src" @click="change(index)">
+      <router-link :to="i.src" @click="change(index)">
         <img :src="i.img1" />
         <p v-text="i.text"></p>
-      </a>
+      </router-link>
+      <!-- <a :href="i.src" @click="change(index)"> -->
+      <!-- <img :src="i.img1" />
+      <p v-text="i.text"></p>-->
+      <!-- </a> -->
     </div>
   </div>
 </template>
@@ -17,7 +21,7 @@ export default {
     change(num) {
       Bus.$emit("val", this.data[num].text);
     }
-  },
+  }
 };
 </script>
 <style scoped>

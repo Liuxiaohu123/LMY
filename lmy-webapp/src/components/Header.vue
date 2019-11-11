@@ -2,7 +2,7 @@
   <div class="Header">
     <span class="back" v-show="flage" @click="back">&lt;</span>
     <img class="headerImg1" src="../assets/header01.gif" />
-    <span class="headerText1">{{!flage?name:className}}</span>
+    <span class="headerText1">{{!flage?name:(className?className:" ")}}</span>
     <span class="headerText2">帮助</span>
   </div>
 </template>

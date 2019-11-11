@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header :flage="flage" :className="data.courses[num].className"></Header>
+    <Header :flage="flage" :className=" data.courses[num].className"></Header>
     <div class="main">
-      <router-view :data="data.courses[num]"></router-view>
+      <router-view :data="data.courses[num]" :myId="data.studentId"></router-view>
     </div>
     <Footer :data="value"></Footer>
   </div>
@@ -13,41 +13,41 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default {
-  props:["data"],
+  props: ["data"],
   data() {
     return {
-      num:0,
+      num: 0,
       flage: true,
       value: [
         {
-          img1: "./image/footer22.gif",
+          img1: "/image/footer22.gif",
           text: "资源",
           img2: "",
-          src: "#/lmyClass/resources"
+          src: "/lmyClass/resources"
         },
         {
-          img1: "./image/footer23.gif",
+          img1: "/image/footer23.gif",
           text: "成员",
           img2: "",
-          src: "#/lmyClass/member"
+          src: "/lmyClass/member"
         },
         {
-          img1: "./image/footer24.gif",
+          img1: "/image/footer24.gif",
           text: "活动",
           img2: "",
-          src: "#/lmyClass/activity"
+          src: "/lmyClass/activity"
         },
         {
-          img1: "./image/footer25.gif",
+          img1: "/image/footer25.gif",
           text: "消息",
           img2: "",
-          src: "#/lmyClass/news"
+          src: "/lmyClass/news"
         },
         {
-          img1: "./image/footer21.gif",
+          img1: "/image/footer21.gif",
           text: "详情",
           img2: "",
-          src: "#/lmyClass/details"
+          src: "/lmyClass/details"
         }
       ]
     };
@@ -57,9 +57,11 @@ export default {
     Footer
   },
   created() {
-    this.num = this.$route.query.num
-    // this.data = this.$route.params.data
-  }
+    this.num = sessionStorage.getItem("num");
+  },
+  mounted() {
+    
+  },
 };
 </script>
 <style  scoped>

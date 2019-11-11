@@ -1,6 +1,8 @@
 <template>
   <div>
-    <activityBox :data="i" v-for="(i, index) in data" :key="index"></activityBox>
+    <div v-for="(i, index) in data" :key="index">
+      <activityBox :data="i" v-if="i.state" ></activityBox>
+    </div>
   </div>
 </template>
 

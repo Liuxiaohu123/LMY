@@ -19,22 +19,22 @@ export default {
       flage:false,
       value: [
         {
-          img1: "./image/booter12.gif",
+          img1: "/image/booter12.gif",
           text: "班课",
           img2: "./image/booter11.gif",
-          src: "#/lmyHome/class"
+          src: "class"
         },
         {
-          img1: "./image/booter22.gif",
+          img1: "/image/booter22.gif",
           text: "发现",
           img2: "./image/booter21.gif",
-          src: "#/lmyHome/find"
+          src: "find"
         },
         {
-          img1: "./image/booter32.gif",
+          img1: "/image/booter32.gif",
           text: "我的",
           img2: "./image/booter31.gif",
-          src: "#/lmyHome/my"
+          src: "my"
         }
       ]
     };

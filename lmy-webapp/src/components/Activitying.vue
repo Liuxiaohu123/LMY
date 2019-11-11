@@ -1,20 +1,21 @@
 <template>
-  <div >
-    <activityBox :data="i" v-for="(i, index) in data" :key="index"></activityBox>
+  <div>
+    <div v-for="(i, index) in data" :key="index">
+      <activityBox :data="i" v-if="!i.state" ></activityBox>
+    </div>
   </div>
 </template>
 
 <script>
-import activityBox from './ActivityBox'
+import activityBox from "./ActivityBox";
 
 export default {
-  props:["data"],
-  name:"Activity",
-  components:{
+  props: ["data"],
+  name: "Activity",
+  components: {
     activityBox
   }
-}
+};
 </script>
 <style  scoped>
-
 </style>

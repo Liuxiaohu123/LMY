@@ -7,7 +7,7 @@
         @click="changea(1)"
       >
         <p>全部</p>
-        <p>{{allActivity | Statistics1(allActivity,"data.activity")}}</p>
+        <p>{{allActivity | Statistics(data.activity,"1")}}</p>
       </a>
       <a
         href="#/lmyClass/activity/activitying"
@@ -15,7 +15,7 @@
         @click="changea(2)"
       >
         <p>进行</p>
-        <p>{{activitying | Statistics2(activitying,data.activity)}}</p>
+        <p>{{activitying | Statistics(data.activity,"2")}}</p>
       </a>
       <a
         href="#/lmyClass/activity/activited"
@@ -23,10 +23,9 @@
         @click="changea(3)"
       >
         <p>已结束</p>
-        <p>{{activited | Statistics3(activited,data.activity)}}</p>
+        <p>{{activited | Statistics(data.activity,"3")}}</p>
       </a>
     </div>
-    {{data.activity}}
     <router-view :data="data.activity"></router-view>
   </div>
 </template>
@@ -49,25 +48,27 @@ export default {
     }
   },
   filters: {
-    Statistics1(num,data) {
-      // for(let i=0;i<arr.length;i++){
-      //   num++
-      // } 
-      num = data;
-      num = num+1;
-      return num;
-    },
-    Statistics2(num,data) {
-      for(let i=0;i<Object.keys(data);i++){
-        num++
-      } 
-      return num
-    },
-    Statistics3(num,data) {
-      for(let i=0;i<Object.keys(data);i++){
-        num++
-      } 
-      return num
+    Statistics(num, data, index) {
+      if (index == "1") {
+        for (let i = 0; i < data.length; i++) {
+          num++;
+        }
+        return num;
+      } else if (index == "2") {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].state) {
+            num++;
+          }
+        }
+        return num;
+      } else if (index == "3") {
+        for (let i = 0; i < data.length; i++) {
+          if (!data[i].state) {
+            num++;
+          }
+        }
+        return num;
+      }
     }
   }
 };

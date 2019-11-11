@@ -1,74 +1,631 @@
 {
   "studentName": "刘小虎",
+  "studentId": "16034022",
   "experience": 56,
   "charm": 10,
   "money": 50,
   "mind": 4,
   "src": "./image/my01.gif",
-  "courses":[
+  "courses": [
     {
-      "class":"软件工程",
-      "className":"javascript开发",
-      "classType":"学校课表班课",
-      "teacheName":"毕鹏",
-      "classStudents":[
+      "class": "软件工程",
+      "className": "javascript开发",
+      "classType": "学校课表班课",
+      "teacheName": "毕鹏",
+      "school": "西安交通大学城市学院  计算机科学与信息管理系",
+      "material": false,
+      "progress": false,
+      "exam": false,
+      "eequirement": false,
+      "classStudents": [
         {
-          "studentName":"刘小虎",
-          "studentId":"16034022",
-          "studentExperience":0,
-          "material":"10%"
+          "studentName": "刘小虎",
+          "studentId": "16034022",
+          "studentExperience": 5,
+          "material": "10%",
+          "src": "/image/student_07.gif"
         },
         {
-          "studentName":"梁明",
-          "studentId":"16034007",
-          "studentExperience":10,
-          "material":"50%"
+          "studentName": "梁明",
+          "studentId": "16034007",
+          "studentExperience": 80,
+          "material": "60%",
+          "src": "/image/student_12.gif"
+        },
+        {
+          "studentName": "望我",
+          "studentId": "16034085",
+          "studentExperience": 40,
+          "material": "20%",
+          "src": "/image/student_10.gif"
+        },
+        {
+          "studentName": "张三",
+          "studentId": "16034045",
+          "studentExperience": 23,
+          "material": "0%",
+          "src": "/image/student_7.gif"
         }
       ],
-      "activity":[
-        {"activityName":"快速排序","experience":10,"peoples":50,"state":true},
-        {"activityName":"查并集","experience":3,"peoples":45,"state":true},
-        {"activityName":"图的遍历","experience":3,"peoples":50,"state":false},
-        {"activityName":"堆排序","experience":3,"peoples":50,"state":false},
-        {"activityName":"二叉树","experience":3,"peoples":5,"state":false},
-        {"activityName":"广度优先","experience":3,"peoples":5,"state":false},
-        {"activityName":"深度余香","experience":3,"peoples":50,"state":true},
-        {"activityName":"栈","experience":3,"peoples":50,"state":true},
-        {"activityName":"堆","experience":3,"peoples":50,"state":true},
-        {"activityName":"数据","experience":3,"peoples":50,"state":false}
-      ]
+      "activity": [
+        {
+          "activityName": "快速排序",
+          "experience": 10,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "查并集",
+          "experience": 3,
+          "peoples": 45,
+          "state": true
+        },
+        {
+          "activityName": "图的遍历",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "堆排序",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "二叉树",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "广度优先",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "深度余香",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "栈",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "堆",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "数据",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        }
+      ],
+      "materials": [
+        {
+          "name": "计算机组成1",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成2",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成3",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 30
+        },
+        {
+          "name": "计算机组成4",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 20
+        }
+      ],
+      "news": {
+        "lmyNews": [
+          {
+            "news": "缺课较多，经常缺课会导致学习跟不上哦",
+            "time": "2016.02.04  08:00"
+          },
+          {
+            "news": "版本更新",
+            "time": "2016.05.05  10:00"
+          }
+        ],
+        "calssNews": [
+          {
+            "news": "考试通知",
+            "time": "2016.05.06  12:30"
+          }
+        ]
+      }
     },
     {
-      "class":"计算机",
-      "className":"数据及结构",
-      "classType":"学校课表班课",
-      "teacheName":"张媛",
-      "classStudents":[
+      "class": "物联网",
+      "className": "计算组成",
+      "classType": "学校课表班课",
+      "teacheName": "毕鹏",
+      "school": "西安交通大学城市学院  计算机科学与信息管理系",
+      "material": false,
+      "progress": false,
+      "exam": false,
+      "eequirement": false,
+      "classStudents": [
         {
-          "studentName":"刘小虎",
-          "studentId":"16034022",
-          "studentExperience":50,
-          "material":"40%"
+          "studentName": "刘小虎",
+          "studentId": "16034022",
+          "studentExperience": 75,
+          "material": "10%",
+          "src": "/image/student_07.gif"
         },
         {
-          "studentName":"梁明",
-          "studentId":"16034007",
-          "studentExperience":20,
-          "material":"30%"
+          "studentName": "梁明",
+          "studentId": "16034007",
+          "studentExperience": 11,
+          "material": "60%",
+          "src": "/image/student_14.gif"
+        },
+        {
+          "studentName": "望我",
+          "studentId": "16034085",
+          "studentExperience": 35,
+          "material": "20%",
+          "src": "/image/student_10.gif"
+        },
+        {
+          "studentName": "张三",
+          "studentId": "16034045",
+          "studentExperience": 75,
+          "material": "0%",
+          "src": "/image/student_12.gif"
+        },
+        {
+          "studentName": "李四",
+          "studentId": "16034045",
+          "studentExperience": 45,
+          "material": "0%",
+          "src": "/image/student_16.gif"
+        },
+        {
+          "studentName": "阿萨达",
+          "studentId": "16034045",
+          "studentExperience": 25,
+          "material": "0%",
+          "src": "/image/student_14.gif"
         }
       ],
-      "activity":[
-        {"activityName":"快速排序","experience":3,"peoples":50,"state":false},
-        {"activityName":"查并集","experience":3,"peoples":45,"state":false},
-        {"activityName":"图的遍历","experience":3,"peoples":50,"state":false},
-        {"activityName":"堆排序","experience":3,"peoples":50,"state":false},
-        {"activityName":"二叉树","experience":3,"peoples":5,"state":true},
-        {"activityName":"广度优先","experience":3,"peoples":5,"state":false},
-        {"activityName":"深度余香","experience":3,"peoples":50,"state":true},
-        {"activityName":"栈","experience":3,"peoples":50,"state":true},
-        {"activityName":"堆","experience":3,"peoples":50,"state":true},
-        {"activityName":"数据","experience":3,"peoples":50,"state":false}
-      ]
+      "activity": [
+        {
+          "activityName": "快速排序",
+          "experience": 10,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "查并集",
+          "experience": 3,
+          "peoples": 45,
+          "state": true
+        },
+        {
+          "activityName": "图的遍历",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "堆排序",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "二叉树",
+          "experience": 3,
+          "peoples": 5,
+          "state": true
+        },
+        {
+          "activityName": "广度优先",
+          "experience": 3,
+          "peoples": 5,
+          "state": true
+        },
+        {
+          "activityName": "深度余香",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "栈",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "堆",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "数据",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        }
+      ],
+      "materials": [
+        {
+          "name": "计算机组成1",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成2",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成3",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 30
+        },
+        {
+          "name": "计算机组成4",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 20
+        }
+      ],
+      "news": {
+        "calssNews": [
+          {
+            "news": "考试通知",
+            "time": "2016.05.06  12:30"
+          }
+        ],
+        "calssNews": [
+          {
+            "news": "听课再通知",
+            "time": "2016.05.06  12:30"
+          }
+        ],
+        "calssNews": [
+          {
+            "news": "考试通知",
+            "time": "2016.06.25  12:30"
+          }
+        ]
+      }
+    },
+    {
+      "class": "软件工程",
+      "className": "javascript开发",
+      "classType": "学校课表班课",
+      "teacheName": "毕鹏",
+      "school": "西安交通大学城市学院  计算机科学与信息管理系",
+      "material": false,
+      "progress": false,
+      "exam": false,
+      "eequirement": false,
+      "classStudents": [
+        {
+          "studentName": "刘小虎",
+          "studentId": "16034022",
+          "studentExperience": 5,
+          "material": "10%",
+          "src": "/image/student_07.gif"
+        },
+        {
+          "studentName": "梁明",
+          "studentId": "16034007",
+          "studentExperience": 80,
+          "material": "60%",
+          "src": "/image/student_14.gif"
+        },
+        {
+          "studentName": "望我",
+          "studentId": "16034085",
+          "studentExperience": 40,
+          "material": "20%",
+          "src": "/image/student_14.gif"
+        },
+        {
+          "studentName": "张三",
+          "studentId": "16034045",
+          "studentExperience": 23,
+          "material": "0%",
+          "src": "/image/student_14.gif"
+        }
+      ],
+      "activity": [
+        {
+          "activityName": "快速排序",
+          "experience": 10,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "查并集",
+          "experience": 3,
+          "peoples": 45,
+          "state": true
+        },
+        {
+          "activityName": "图的遍历",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "堆排序",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "二叉树",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "广度优先",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "深度余香",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "栈",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "堆",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "数据",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        }
+      ],
+      "materials": [
+        {
+          "name": "计算机组成1",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成2",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成3",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 30
+        },
+        {
+          "name": "计算机组成4",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 20
+        }
+      ],
+      "news": {
+        "lmyNews": [
+          {
+            "news": "缺课较多，经常缺课会导致学习跟不上哦",
+            "time": "2016.02.04  08:00"
+          },
+          {
+            "news": "版本更新",
+            "time": "2016.05.05  10:00"
+          }
+        ],
+        "calssNews": [
+          {
+            "news": "考试通知",
+            "time": "2016.05.06  12:30"
+          }
+        ]
+      }
+    },
+    {
+      "class": "软件工程",
+      "className": "javascript开发",
+      "classType": "学校课表班课",
+      "teacheName": "毕鹏",
+      "school": "西安交通大学城市学院  计算机科学与信息管理系",
+      "material": false,
+      "progress": false,
+      "exam": false,
+      "eequirement": false,
+      "classStudents": [
+        {
+          "studentName": "刘小虎",
+          "studentId": "16034022",
+          "studentExperience": 5,
+          "material": "10%",
+          "src": "/image/student_07.gif"
+        },
+        {
+          "studentName": "梁明",
+          "studentId": "16034007",
+          "studentExperience": 80,
+          "material": "60%",
+          "src": "/image/student_14.gif"
+        },
+        {
+          "studentName": "望我",
+          "studentId": "16034085",
+          "studentExperience": 40,
+          "material": "20%",
+          "src": "/image/student_14.gif"
+        },
+        {
+          "studentName": "张三",
+          "studentId": "16034045",
+          "studentExperience": 23,
+          "material": "0%",
+          "src": "/image/student_14.gif"
+        }
+      ],
+      "activity": [
+        {
+          "activityName": "快速排序",
+          "experience": 10,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "查并集",
+          "experience": 3,
+          "peoples": 45,
+          "state": true
+        },
+        {
+          "activityName": "图的遍历",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "堆排序",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        },
+        {
+          "activityName": "二叉树",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "广度优先",
+          "experience": 3,
+          "peoples": 5,
+          "state": false
+        },
+        {
+          "activityName": "深度余香",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "栈",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "堆",
+          "experience": 3,
+          "peoples": 50,
+          "state": true
+        },
+        {
+          "activityName": "数据",
+          "experience": 3,
+          "peoples": 50,
+          "state": false
+        }
+      ],
+      "materials": [
+        {
+          "name": "计算机组成1",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成2",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 50
+        },
+        {
+          "name": "计算机组成3",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 30
+        },
+        {
+          "name": "计算机组成4",
+          "size": "9.40MB",
+          "time": "11.05  22:56",
+          "exp": 10,
+          "consults": 20
+        }
+      ],
+      "news": {
+        "lmyNews": [
+          {
+            "news": "缺课较多，经常缺课会导致学习跟不上哦",
+            "time": "2016.02.04  08:00"
+          },
+          {
+            "news": "版本更新",
+            "time": "2016.05.05  10:00"
+          }
+        ],
+        "calssNews": [
+          {
+            "news": "考试通知",
+            "time": "2016.05.06  12:30"
+          }
+        ]
+      }
     }
   ]
 }

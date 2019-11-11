@@ -1,19 +1,42 @@
 <template>
-    <Londing>
-      <button slot="btn" class="londingBtn" @click="clear">跳过(5)</button>
-    </Londing>
+  <Londing>
+    <button slot="btn" class="londingBtn" @click="toHome">跳过({{num  }})</button>
+  </Londing>
 </template> 
 <script>
 import Londing from "../components/Londing.vue";
 export default {
-  name:"LmyLonding",
+  name: "LmyLonding",
+  data() {
+    return {
+      num: 5,
+      time: null
+    };
+  },
   components: {
     Londing
   },
   methods: {
-    clear(){
-      
+    toHome() {
+      this.$router.push("/lmyHome");
+      if(this.time){
+        clearInterval(this.time);
+      }
+    },
+    _countdown() {
+      let that = this;
+      this.time = setInterval(() => {
+        if (this.num > 0) {
+          this.num--;
+        } else {
+          clearInterval(this.time);
+          that.toHome()
+        }
+      }, 1000);
     }
+  },
+  created() {
+    this._countdown(this.num)
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="activityBox">
+  <div class="activityBox" v-if="data">
     <div class="activityBoxTop"><img src="../assets/activity01.gif"><p>{{data.activityName}}</p></div>
     <div class="activityBoxBootom">
       <p class="activityPop"><span>{{data.peoples}}</span>人参与</p>
@@ -10,6 +10,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>

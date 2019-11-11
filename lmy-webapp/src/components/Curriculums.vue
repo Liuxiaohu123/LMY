@@ -1,5 +1,32 @@
 <template>
-  <a class="curriculums" :href=" '#/lmyClass?num='+courseId" @click="Join">
+
+  <router-link v-if="courseId!='false' "
+    class="curriculums"
+    :to="{path:'/lmyClass',query:{id:courseId}}"
+    @click="Join">
+  <!-- <a
+    v-if="courseId!='false' "
+    class="curriculums"
+    :href=" '#/lmyClass?num='+courseId"
+    @click="Join"
+  > -->
+    <div
+      class="cImg"
+      :style="{'background-color':'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')'}"
+    >
+      <img src="../assets/yun.gif" />
+    </div>
+    <div class="cText">
+      <h3>{{course.class}}</h3>
+      <h3>{{course.className}}</h3>
+      <p>
+        <span>{{course.teacheName}}</span>
+        <span>{{course.classType}}</span>
+      </p>
+    </div>
+  <!-- </a> -->
+  </router-link>
+  <a v-else class="curriculums">
     <div
       class="cImg"
       :style="{'background-color':'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')'}"
